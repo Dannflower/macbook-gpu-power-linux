@@ -4,7 +4,7 @@ If you've found this, you're likely several hours down the rabbit hole of old ha
 
 # Warning!
 
-This is a hack, it is not supported, and you proceed at your own risk. Skipping steps, or unforseen errors will quickly lead to frozen screens when GDM starts.
+This is a hack, it is not supported, and you proceed at your own risk. Skipping steps, or unforseen errors will quickly lead to frozen screens when GDM starts or even unbootable states.
 
 ## Context & Goal
 
