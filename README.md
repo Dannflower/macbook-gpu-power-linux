@@ -8,9 +8,9 @@ This is a hack, it is not supported, and you proceed at your own risk. Skipping 
 
 ## Context & Goal
 
-Some older MacBook Pros from around 2012 have hybrid graphics which include a dedicated AMD or Nvidia GPU and integrated Intel graphics. Unfortunately, the dedicated GPUs are so old at this point they don't really help with much and just drain your battery and make your laptop extremely hot.
+Some older MacBook Pros from around 2012 have hybrid graphics which include a discrete AMD or Nvidia GPU and integrated Intel graphics. Unfortunately, the discrete GPUs are so old at this point they don't really help with much and just drain your battery and make your laptop extremely hot.
 
-The goal of this repo is to provide a reasonably easy way to switch to using the integrated Intel graphics and simultaneously switch off power to the dedicated GPU.
+The goal of this repo is to provide a reasonably easy way to switch to using the integrated Intel graphics and simultaneously switch off power to the discrete GPU.
 
 ## Tested Hardware & OS
 
@@ -24,7 +24,7 @@ Install the open-source video-linux drivers. Specifically, this has only been te
 ## Gpu-switch
 Install gpu-switch from AUR: https://aur.archlinux.org/packages/gpu-switch
 
-This is a handy tool for older MacBooks that allows for switching between integrated graphics or dedicated between boots. This should be available for other distros as well.
+This is a handy tool for older MacBooks that allows for switching between integrated graphics or discrete between boots. This should be available for other distros as well.
 
 For more info see the repo: https://github.com/0xbb/gpu-switch
 
@@ -61,7 +61,7 @@ sudo gpu-switch -i
 
 Reboot your computer for the changes to take affect.
 
-This change adds a non-trivial amount of startup time. The gpu-power script will first sleep for 5 seconds to allow the GPU driver to load. It will then power down the dedicated GPU which takes a moment, and finally it will restart GDM which also takes a moment. The screen will flicker a couple of times and then the login should appear.
+This change adds a non-trivial amount of startup time. The gpu-power script will first sleep for 5 seconds to allow the GPU driver to load. It will then power down the discrete GPU which takes a moment, and finally it will restart GDM which also takes a moment. The screen will flicker a couple of times and then the login should appear.
 
 ## Verify
 
@@ -86,7 +86,7 @@ Enjoy the cooler laptop and longer battery life!
 
 If something goes wrong or an error occurs, GDM will likely freeze as soon as it boots and you will be greeted by a gray or black screen and maybe a mouse cursor.
 
-I find this most often happens if the dedicated GPU is not powered off but gpu-switch has been used to switch to the integrated GPU.
+I find this most often happens if the discrete GPU is not powered off but gpu-switch has been used to switch to the integrated GPU.
 
 Generally this can be fixed by logging in with a tty session instead of GDM and undoing the gpu-switch change.
 
@@ -95,7 +95,7 @@ When the black/grey GDM screen comes up, switch to tty.
 ctrl + alt + F2
 ```
 
-Login and switch back to dedicated graphics.
+Login and switch back to discrete graphics.
 ```
 sudo gpu-switch -d
 ```
