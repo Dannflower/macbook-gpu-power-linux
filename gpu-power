@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Note: Only works with Nouveau drivers. Proprietary will not generate/maintain>
+# Note: Only works with Nouveau drivers. Proprietary will not generate/maintain vgaswitcheroo.
 
 # Let the graphics driver load
 sleep 5

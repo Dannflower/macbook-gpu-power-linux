@@ -1,5 +1,5 @@
 [Unit]
-Description=Powers down the dGPU in favor of the iGPU. For use with Macbook Pro>
+Description=Power down the dGPU in favor of the iGPU
 
 [Service]
 ExecStart=/usr/bin/gpu-power
