@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Note: Only works with Nouveau drivers. Proprietary will not generate/maintain>
+
+# Let the graphics driver load
+sleep 5
+
+# Disables the GPU not in use, be sure to run `gpu-switch -i` and reboot,
+# otherwise the iGPU will get powered off instead.
+echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
+
+# Restart Gnome Desktop so it properly uses the iGPU.
+systemctl restart gdm

@@ -1,0 +1,8 @@
+[Unit]
+Description=Powers down the dGPU in favor of the iGPU. For use with Macbook Pro>
+
+[Service]
+ExecStart=/usr/bin/gpu-power
+
+[Install]
+WantedBy=multi-user.target
