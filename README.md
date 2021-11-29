@@ -80,6 +80,16 @@ IGD should have the + and PWR while DIS should not and be marked as Off.
 
 Enjoy the cooler laptop and longer battery life!
 
+## Reverting to Discrete GPU
+
+Switching back to the discrete GPU can be done using gpu-switch and rebooting. The service will take care of powering down the integrated graphics.
+
+```
+gpu-switch -d
+```
+
+Reboot for the changes to take affect.
+
 # Troubleshooting
 
 ## Frozen Login Screen
